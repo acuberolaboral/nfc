@@ -364,13 +364,16 @@
   if (row) row.href = 'ma' + 'il' + 'to' + String.fromCharCode(58) + email;
 })();
 
-var vcardData = [
+  var fotoBase64 = document.querySelector('.flip-back img').src.split(',')[1];
+  
+  var vcardData = [
   'BEGIN:VCARD',
   'VERSION:3.0',
   'FN:Alicia Cubero',
   'N:Cubero;Alicia;;;',
   'ORG:Acubero RRHH & Laboral',
   'TITLE:Asesoria Laboral / Consultoria RRHH',
+  'PHOTO;ENCODING=b;TYPE=JPEG:' + fotoBase64,
   'TEL;TYPE=CELL,VOICE:+34639946848',
   'EMAIL;TYPE=WORK:cuberolaboralrrhh' + String.fromCharCode(64) + 'gmail.com',
   'URL:https://acubero.com',
